@@ -1,0 +1,394 @@
+/* Fontes: */
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600;700&family=Josefin+Slab:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Muli:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400&display=swap");
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css');
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-image: url(./imagens/bgBodyDark.jpg);
+}
+
+main {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+:root {
+  --color-primary-one: #0316fc;
+  --color-primary-two: white;
+  --color-second-one: white;
+  --color-second-two: yellow;
+  --color-bg-dark: #000a1a;
+  --color-contrast: #caf0f8;
+  
+  --font-primary: "Baloo Da 2", serif;
+  --font-subtitle: 'Audiowide', cursive;
+  --font-text: 'Electrolize', sans-serif;
+  --font-action: "Muli", serif;
+}
+
+
+
+/*** CONF GERAIS***/
+.btnContact,
+.btnCard {
+  font-family: var(--font-action);
+  color: #eee;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  box-shadow: 0.1rem 0.1rem 0.8rem rgba(0, 0, 0, 0.4);
+  background: var(--color-second-one);
+  background: -webkit-linear-gradient(to right, var(--color-primary-one), var(--color-second-one));
+  background: linear-gradient(to left, var(--color-primary-one), var(--color-second-one));
+  text-shadow: #000 1px 1px 1px;
+}
+ 
+.btnCard:hover,
+.btnContact:hover,
+#link-topo:hover{ 
+  background: -webkit-linear-gradient(to left, #3fdcfc, white);
+  background: linear-gradient(to left, #3fdcfc, white);
+}
+
+
+
+/* Titulo das sessões */
+
+.sessao-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.1rem;
+}
+
+.sessao-header h2 {
+  font-weight: normal;
+  font-family: var(--font-subtitle);
+  font-size: 2.5rem;
+  color: var(--color-primary-one);
+  border-bottom: solid 3px var(--color-second-one);
+  margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+/* ** SOBRE ** */
+.sobre {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.imageprofile {
+  width: 15.125rem;
+  height: 15.125rem;
+  background-color: var(--color-primary-one);
+  box-shadow: var(--color-primary-one) 1px 1px 10px 2px;
+  border-radius: 5rem;
+  overflow: hidden;
+  position: absolute;
+} 
+
+.card-imageprofile:hover {
+  transform: rotate(15deg);
+  transition: 0.7s;
+}
+
+.card-imageprofile img {
+  width: 15.125rem;
+  height: auto;
+  border-radius: 5rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.card-imageprofile img:hover {
+  transform: rotate(-30deg);
+  transition: 0.7s;
+}
+
+.card-sobre {
+  width: 700px;
+  height: 100%;
+  text-align: justify;
+}
+
+.card-sobre p {
+  font-size: 1.07rem;
+  color: rgb(207, 239, 254);
+  margin-block-start: 1rem;
+  margin-block-end: 1rem;
+  line-height:1.5rem;
+  text-shadow: 5px 5px 10px rgba(0, 0, 0);
+  font-family: var(--font-primary)
+}
+
+/* ** CONHECIMENTOS ** */
+
+.conhecimentos{
+  display: flex;
+  justify-content: space-evenly; 
+  align-items: center;
+  flex-wrap: wrap;
+  min-height: 80vh;
+}
+
+.card-tecs i{
+  font-size: 4rem;
+  word-spacing: 5rem;
+  text-shadow: 0.1rem 0.1rem 1rem #120a8f;
+  color: whitesmoke;
+  margin: 2rem;
+}
+
+.card-tecs i:hover{
+  text-shadow: 0.1rem 0.1rem 3rem #120a8f;
+  transition: 0.5s;
+}
+
+.card-tecs p{
+  color: var(--color-second-one);
+  text-transform: uppercase;
+  font-family: var(--font-primary);
+  font-weight: 600;
+  text-align: center;
+  text-shadow: 0.01rem 0.01rem 0.1rem #000;
+}
+
+/* ** PROJETOS ** */
+.projetos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-content: center;
+  margin-bottom: 2rem;
+  margin-top: 3rem;
+}
+
+.card {
+  position: relative;
+  flex: 0 1 30%;
+  min-width: 280px;
+  height: 65vh; 
+  min-height: 450px;
+  padding: 0.6rem;
+  border-radius: 0.5rem;
+  background: #036dab;
+  background: -webkit-linear-gradient(to bottom, #036dab, var(--color-bg-dark)); 
+  background: linear-gradient(to bottom, #036dab, var(--color-bg-dark)); 
+  border:var(--color-primary-one) 1px solid;
+  margin: 0 0.5rem 1.5rem;
+}
+
+.card:hover {
+  transition: 0.5s;
+  bottom: 0.5rem;
+  opacity: 1;
+  box-shadow: var(--color-primary-one) 1px 1px 10px 2px;  
+}
+
+.card-img-wrapper {
+  width: 100%;
+  height: 50%;
+  margin-bottom: 0.5rem;
+}
+
+.card-img-wrapper img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.5rem;
+  opacity: 0.9;
+  transition: opacity 0.3s;
+
+}
+
+.card:hover .card-img-wrapper img {
+  opacity: 1;
+}
+
+.card-info {
+  padding: 0.4rem;
+  height: 50%;
+  position: relative; 
+  transition: all 1s; 
+  text-align: center;
+}
+
+.card-info h3 {
+  font-family: var(--font-primary);
+  font-weight: 500;
+  line-height: 1.5rem;
+  color: var(--color-primary-one);
+  text-shadow: 0.1rem 0.1rem 0.2rem rgba(0,0,0, 0.6);
+  margin-bottom: 0.5rem; 	
+  font-size: 1.5em;
+}
+
+.card-info p {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  font-family:  var(--font-primary);
+  line-height: 1rem;
+  text-align: justify;
+  font-size: 0.8rem ;
+  font-weight: 200;
+  color: #fff;
+  width: 100%;
+  margin-bottom: 0.5rem;
+  height: 35%;
+}
+
+.btnCard {
+  display: block;
+  margin-inline: auto;
+  width: 8rem;
+  height: 2rem;
+  margin-bottom: 1.5rem;
+  font-size: 0.8rem;
+  padding: 8px;
+  box-shadow: #4f0071 0.1rem 0.1rem 0.1rem; 
+}
+
+.card-info .construcao {
+  font-weight: 600;
+  color: #000;
+  text-shadow: -1px 0 rgb(202, 96, 35), 0 1px rgb(202, 96, 35), 1px 0 rgb(202, 96, 35), 0 -1px rgb(202, 96, 35);
+  background-image: url(https://i.pinimg.com/736x/a8/eb/4c/a8eb4c6e3963e05255ffd155c42feffc.jpg);
+  background-size: cover;
+  filter: grayscale(0.4);
+}
+
+.tecs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.tecs img {
+  height: 18px;
+  width: auto;
+}
+
+/* ** CONTATO ** */
+
+.sessao-contato{
+  background-image: url(imagens/bgContact.png);
+  background-size: cover;
+  background-position: top;
+  padding: 2rem 0 0 ;
+  height: 100%;
+  min-height: 600px;
+  position: relative;
+  padding-bottom: 7rem;
+}
+
+.contato {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly; 
+  align-items: center;
+  position: relative;
+  height: 100%;
+  max-width: 900px;
+  margin: auto;
+}
+
+.card-contato {
+  width: 250px;
+  height: 200px;
+  padding: 6% 5%;
+  text-align: center;
+  border-radius: 3rem;
+  position: relative;
+  background-color: #120a8f;
+  color: white;
+  text-shadow: grey 0.07rem 0.07rem 0.2rem;
+  opacity: 0.9;
+  font-family: var(--font-action);  
+  box-shadow: var(--color-primary-one) 1px 1px 8px 1px;
+  margin: 10px;
+}
+
+.card-contato:hover {
+  padding: 2% 1%;
+  color: white;
+  text-shadow: var(--color-bg-dark) 0.04rem 0.04rem 0.1rem;
+  background: rgba(0, 251, 255, 0.08);
+  border: 1px solid #ffffff7d;
+  box-shadow:  white 1px 1px 8px 1px; 
+  transition: .5s;
+}
+
+.card-contato i{
+  font-size: 25px;
+  margin-bottom: 25px;
+}
+
+.card-contato:hover i {
+  margin-bottom: 10px;
+}
+
+.card-contato p, 
+.btnContact {
+  margin-top: 20px;
+  opacity: 0;
+}
+
+.btnContact {
+  display: block;
+  margin-inline: auto;
+  background: var(--color-second-one);
+  background: -webkit-linear-gradient(to right, var(--color-primary-one), var(--color-second-one));
+  background: linear-gradient(to left, var(--color-primary-one), var(--color-second-one));
+  width: 10rem;
+  height: 2rem;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  padding: 8px;
+}
+.card-contato:hover p, 
+.card-contato:hover .btnContact {
+  opacity: 0.9;
+}
+
+.card-contato:hover h3{
+  font-size: 1.3rem;
+}
+
+/* ** FOOTER ** */
+
+footer{
+  width: 100%;
+  height: 5rem;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+}
+
+
+.footer-content p{
+  font-family: var(--font-primary);
+  color: var(--color-contrast);
+  font-size: 1rem;
+}
+
+
